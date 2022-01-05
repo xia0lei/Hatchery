@@ -1,0 +1,9 @@
+{
+  "Gateway": {
+    "Host": "127.0.0.1:8888",
+    "Class": "Hatchery.Test.Gateway.GatewayCase",
+    "Name": "gateway"
+  },
+
+  "Logger": "./Test/Gateway/"
+}

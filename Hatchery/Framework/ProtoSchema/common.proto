@@ -1,0 +1,63 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Hatchery.Framework.ProtoSchema";
+
+package common;
+
+message ErrorMessage{
+    int32 errorCode = 1;
+    string errorText = 2;
+}
+
+message Logger_Init{
+    string logger_path = 1;
+}
+
+message ClusterServer_Init{
+    int32 tcp_server_id = 1;
+}
+
+message ClusterClient_Init{
+    string cluster_config = 1;
+    int32 tcp_client_id = 2;
+}
+
+message ClusterClientRequest{
+    string remoteNode = 1;
+    string remoteService = 2;
+    string method = 3;
+    string param = 4;
+}
+
+message ClusterClientSocketConnected{
+    int64 connection = 1;
+    string ip = 2;
+    int32 port = 3;
+}
+
+message SocketAccept{
+    int64 connection = 1;
+    string ip = 2;
+    int32 port = 3;
+}
+
+message SocketError{
+    int64 connection = 1;
+    int32 errorCode = 2;
+    string errorText = 3;
+    string remoteEndPoint = 4;
+}
+
+message SocketData{
+    int64 connection = 1;
+    string buffer = 2;
+}
+
+message RPCParam{
+    string method = 1;
+    string param = 2;
+}
+
+message Gateway_Init{
+    int64 tcp_server_id = 1;
+}

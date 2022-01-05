@@ -1,0 +1,17 @@
+syntax = "proto3";
+package SkynetMessageReceiver;
+
+message SkynetMessageReceiver_OnProcessRequest{
+    int32 request_count = 1;
+    string request_text = 2;
+}
+
+message SkynetMessageReceiver_OnProcessRequestResponse{
+    int32 request_count = 1;
+    string request_text = 2;
+}
+
+message RPC{
+    string method = 1;
+    string param = 2;
+}

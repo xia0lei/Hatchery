@@ -1,0 +1,10 @@
+local protocols = {}
+{{#indexToName}}
+protocols[{{index}}] = "{{name}}"
+{{/indexToName}}
+
+{{#indexToName}}
+protocols["{{name}}"] = {{index}}
+{{/indexToName}}
+
+return protocols

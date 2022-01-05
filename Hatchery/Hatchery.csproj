@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Framework\" />
+    <Folder Include="Framework\Utility\" />
+    <Folder Include="Framework\Service\" />
+    <Folder Include="Framework\ProtoSchema\" />
+    <Folder Include="Framework\MessageQueue\" />
+    <Folder Include="Framework\Network\" />
+    <Folder Include="Framework\Timer\" />
+    <Folder Include="Framework\Service\Logger\" />
+    <Folder Include="Framework\Service\ClusterClient\" />
+    <Folder Include="Framework\Service\ClusterServer\" />
+    <Folder Include="Test\" />
+    <Folder Include="Test\Gateway\" />
+    <Folder Include="Test\RPC\" />
+    <Folder Include="Framework\Service\Gateway\" />
+    <Folder Include="Battle\" />
+    <Folder Include="Battle\Gateway\" />
+    <Folder Include="Battle\Proto\" />
+    <Folder Include="Battle\Bean\" />
+    <Folder Include="Battle\Handler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Google.Protobuf" Version="3.17.2" />
+    <PackageReference Include="NLog" Version="4.7.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Test\" />
+    <None Remove="Framework\Service\Gateway\" />
+  </ItemGroup>
+</Project>

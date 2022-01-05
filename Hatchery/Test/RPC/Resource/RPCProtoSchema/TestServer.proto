@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package TestServer;
+
+message TestServer_OnRequest{
+    int64 request_time = 1;
+    string request_text = 2;
+} 
+
+message TestServer_OnResponse{
+    int64 response_time = 1;
+    string response_text = 2;
+}
